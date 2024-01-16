@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your E-Commerce Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #232f3e;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+            border-radius: 5px;
+            background-color: #4CAF50;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1em;
+        }
+
+        article {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 1em;
+            width: calc(20% - 2em); /* 20% width with margin included */
+        }
+
+        .cart {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 1em;
+            width: 300px;
+        }
+
+        .cart h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5em;
+        }
+
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5em;
+        }
+
+        .cart button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em;
+            cursor: pointer;
+            margin-top: 0.5em;
+        }
+
+        footer {
+            background-color: #232f3e;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="font-size: 40px;">553工具社</h1>
+    </header>
+
+    <nav>
+        <a href="#">首頁</a>
+        <a href="#">商店</a>
+        <a href="#">聯絡</a>
+    </nav>
+
+    <main>
+        <article>
+            <img src="item1.png" alt="Product 1 Image" width="200" height="150">
+            <h3>Product 1</h3>
+            <p>Description of Product 1.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item2.png" alt="Product 2 Image" width="200" height="150">
+            <h3>Product 2</h3>
+            <p>Description of Product 2.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 2', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item3.png" alt="Product 3 Image" width="200" height="150">
+            <h3>Product 3</h3>
+            <p>Description of Product 3.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 3', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item4.png" alt="Product 4 Image" width="200" height="150">
+            <h3>Product 4</h3>
+            <p>Description of Product 4.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 4', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item5.png" alt="Product 5 Image" width="200" height="150">
+            <h3>Product 5</h3>
+            <p>Description of Product 5.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 5', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item6.png" alt="Product 6 Image" width="200" height="150">
+            <h3>Product 6</h3>
+            <p>Description of Product 6.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 6', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item7.png" alt="Product 7 Image" width="200" height="150">
+            <h3>Product 7</h3>
+            <p>Description of Product 7.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 7', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item8.png" alt="Product 8 Image" width="200" height="150">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 8', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item9.png" alt="Product 9 Image" width="200" height="150">
+            <h3>Product 9</h3>
+            <p>Description of Product 9.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 9', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item10.png" alt="Product 10 Image" width="200" height="150">
+            <h3>Product 10</h3>
+            <p>Description of Product 10.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 10', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item11.png" alt="Product 11 Image" width="200" height="150">
+            <h3>Product 11</h3>
+            <p>Description of Product 11.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 11', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item12.png" alt="Product 12 Image" width="200" height="150">
+            <h3>Product 12</h3>
+            <p>Description of Product 12.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 12', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item13.png" alt="Product 13 Image" width="200" height="150">
+            <h3>Product 13</h3>
+            <p>Description of Product 13.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 13', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item14.png" alt="Product 14 Image" width="200" height="150">
+            <h3>Product 14</h3>
+            <p>Description of Product 14.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 14', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item15.png" alt="Product 15 Image" width="200" height="150">
+            <h3>Product 15</h3>
+            <p>Description of Product 15.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 15', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item16.png" alt="Product 16 Image" width="200" height="150">
+            <h3>Product 16</h3>
+            <p>Description of Product 16.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 16', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item17.png" alt="Product 17 Image" width="200" height="150">
+            <h3>Product 17</h3>
+            <p>Description of Product 17.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 17', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item18.png" alt="Product 18 Image" width="200" height="150">
+            <h3>Product 18</h3>
+            <p>Description of Product 18.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 18', 19.99)">Add to Cart</button>
+        </article>
+        <article>
+            <img src="item19.png" alt="Product 19 Image" width="200" height="150">
+            <h3>Product 19</h3>
+            <p>Description of Product 19.</p>
+            <p>Price: $19.99</p>
+            <button onclick="addToCart('Product 19', 19.99)">Add to Cart</button>
+        </article>
+<!-- Shopping Cart -->
+<div class="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cartItems">
+        <!-- Cart items will be dynamically added here -->
+    </ul>
+    <p>Total: $<span id="cartTotal">0.00</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="generateCartCode()">Generate Cart Code</button>
+</div>
+
+
+
+
+
+
+        <article>
+            <script>
+                let cart = [];
+            
+                function addToCart(productName, price) {
+                    const existingItem = cart.find(item => item.name === productName);
+            
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cart.push({ name: productName, price: price, quantity: 1 });
+                    }
+            
+                    updateCart();
+                }
+            
+                function removeFromCart(index) {
+                    const removedItem = cart[index];
+                    if (removedItem) {
+                        if (removedItem.quantity > 1) {
+                            removedItem.quantity--;
+                        } else {
+                            cart.splice(index, 1);
+                        }
+                    }
+            
+                    updateCart();
+                }
+            
+                function clearCart() {
+                    cart = [];
+                    updateCart();
+                }
+            
+                function updateCart() {
+                    const cartItemsElement = document.getElementById('cartItems');
+                    const cartTotalElement = document.getElementById('cartTotal');
+            
+                    cartItemsElement.innerHTML = '';
+            
+                    cart.forEach((item, index) => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `
+                            <img src="product${index + 1}.jpg" alt="${item.name} Image">
+                            <span>${item.name} (${item.quantity})</span>
+                            <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                            <button onclick="removeFromCart(${index})">Remove</button>
+                        `;
+                        cartItemsElement.appendChild(listItem);
+                    });
+            
+                    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                    cartTotalElement.textContent = total.toFixed(2);
+                }
+            
+                function generateCartCode() {
+    const code = cart
+        .map(item => {
+            const productCode = getProductCode(item.name);
+            return productCode + item.quantity;
+        })
+        .join('');
+    alert('Cart Code: ' + code);
+}
+
+function generateCartCode() {
+    const code = cart
+        .map(item => {
+            const productCode = getProductCode(item.name);
+            return productCode + item.quantity;
+        })
+        .join('');
+    alert('Cart Code: ' + code);
+}
+
+function generateCartCode() {
+    const sortedCart = cart.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+    const code = sortedCart
+        .map(item => {
+            const productCode = getProductCode(item.name);
+            return productCode + item.quantity;
+        })
+        .join('');
+        
+    alert('Cart Code: ' + code.toUpperCase());
+}
+
+function getProductCode(productName) {
+    const productCodes = {
+        'Product 1': 'A',
+        'Product 2': 'B',
+        'Product 3': 'C',
+        'Product 4': 'D',
+        'Product 5': 'E',
+        'Product 6': 'F',
+        'Product 7': 'G',
+        'Product 8': 'H',
+        'Product 9': 'I',
+        'Product 10': 'J',
+        'Product 11': 'K',
+        'Product 12': 'L',
+        'Product 13': 'M',
+        'Product 14': 'N',
+        'Product 15': 'O',
+        'Product 16': 'P',
+        'Product 17': 'Q',
+        'Product 18': 'R',
+        'Product 19': 'S',
+    };
+
+    // Default to 'Z' if the product is not in the list
+    return productCodes[productName] || 'Z';
+}
+
+
+
+
+
+
+            </script>
+            
